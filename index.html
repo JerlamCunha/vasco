@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Sátiro Ramos">
+    <meta name="keywords" content="interpretação de análise de solo, adubação, fertilidade do solo">
+    <meta name="description" content="Sistema Para Interpretação de Análise de Solo">
+    <title>Interpretação de Análise de Solo</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Interpretação de Análise de Solo</h1>
+
+        <!-- Inputs organizados em duas colunas -->
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="ph">Valor do pH:</label>
+                <input type="text" name="ph" class="ph form-control text-center">
+            </div>
+            <div class="col-sm-6">
+                <label for="p">Valor do P:</label>
+                <input type="text" name="p" class="p form-control text-center" placeholder="mg/kg ou mg/dm3">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="k">Valor do K:</label>
+                <input type="text" name="k" class="k form-control text-center" placeholder="mg/kg ou mg/dm3">
+            </div>
+            <div class="col-sm-6">
+                <label for="ca">Valor do Ca:</label>
+                <input type="text" name="ca" class="ca form-control text-center" placeholder="cmolc/dm3">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="mg">Valor do Mg:</label>
+                <input type="text" name="mg" class="mg form-control text-center" placeholder="cmolc/dm3">
+            </div>
+            <div class="col-sm-6">
+                <label for="al">Valor do Al:</label>
+                <input type="text" name="al" class="al form-control text-center" placeholder="cmolc/dm3">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="s">Valor do S:</label>
+                <input type="text" name="s" class="s form-control text-center" placeholder="cmolc/dm3">
+            </div>
+            <div class="col-sm-6">
+                <label for="mo">Matéria Orgânica (MO):</label>
+                <input type="text" name="mo" class="mo form-control text-center" placeholder="g/kg ou g/dm3">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="textura">Textura do Solo:</label>
+                <select id="textura" class="form-select text-center" name="textura">
+                    <option value="" selected></option>
+                    <option value="arenosa">Arenosa</option>
+                    <option value="media">Média</option>
+                    <option value="argilosa">Argilosa</option>
+                </select>
+            </div>
+            <div class="col-sm-6">
+                <label for="boro">Valor do B:</label>
+                <input type="text" name="boro" class="boro form-control text-center" placeholder="mg/kg ou mg/dm3">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="fe">Valor do Fe:</label>
+                <input type="text" name="fe" class="fe form-control text-center" placeholder="mg/kg ou mg/dm3">
+            </div>
+            <div class="col-sm-6">
+                <label for="cobre">Valor do Cu:</label>
+                <input type="text" name="cobre" class="cobre form-control text-center" placeholder="mg/kg ou mg/dm3">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="mn">Valor do Mn:</label>
+                <input type="text" name="mn" class="mn form-control text-center" placeholder="mg/kg ou mg/dm3">
+            </div>
+            <div class="col-sm-6">
+                <label for="zn">Valor do Zn:</label>
+                <input type="text" name="zn" class="zn form-control text-center" placeholder="mg/kg ou mg/dm3">
+            </div>
+        </div>
+
+        <!-- Botão de interpretação abaixo dos inputs -->
+        <div class="text-center mt-3">
+            <button onclick="interpretar()" class="btn btn-warning">Interpretar</button>
+        </div>
+
+        <!-- Popup Modal de Resultados -->
+        <div id="resultadoModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="resultado">
+                    <p class="res-ph"></p>
+                    <p class="res-p"></p>
+                    <p class="res-k"></p>
+                    <p class="res-ca"></p>
+                    <p class="res-mg"></p>
+                    <p class="res-al"></p>
+                    <p class="res-s"></p>
+                    <p class="res-mo"></p>
+                    <p class="res-boro"></p>
+                    <p class="res-fe"></p>
+                    <p class="res-cobre"></p>
+                    <p class="res-mn"></p>
+                    <p class="res-zn"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
